@@ -1,0 +1,64 @@
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/600.css";
+@import "@fontsource/syne/700.css";
+@import "@fontsource/syne/800.css";
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f7f6f2;
+  --color-surface: #efeeea;
+  --color-ink: #0a0a0a;
+  --color-muted: #6b6b6b;
+  --color-accent: #e63946;
+  --color-border: #d4d4d4;
+  --color-profile: #cabbde;
+  --font-display: "Syne", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply m-0 bg-cream font-body text-ink antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-accent) 25%, transparent);
+  }
+}
+
+@layer utilities {
+  .text-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .outline-number {
+    -webkit-text-stroke: 1.5px color-mix(in srgb, var(--color-ink) 15%, transparent);
+    color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
