@@ -5,6 +5,8 @@ export interface Project {
   tags: string[]
   image: string
   imageAlt: string
+  url?: string
+  ctaLabel?: string
 }
 
 export const projects: Project[] = [
@@ -16,6 +18,8 @@ export const projects: Project[] = [
     tags: ['REACT', 'GOOGLE MAPS API', 'VITE', 'ACCESSIBILITY'],
     image: '/images/projects/county-vineyards.png?v=3',
     imageAlt: 'County Vineyards website shown on a laptop, featuring winery search and map discovery',
+    url: 'https://countyvineyards.ca',
+    ctaLabel: 'Visit County Vineyards',
   },
   {
     id: 2,
@@ -34,6 +38,8 @@ export const projects: Project[] = [
     tags: ['DRUPAL', 'UX DESIGN', 'ACCESSIBILITY', 'HIGHER ED'],
     image: '/images/projects/admissions.png?v=3',
     imageAlt: 'University of Toronto Scarborough admissions website shown on a laptop',
+    url: 'https://www.utsc.utoronto.ca/admissions/',
+    ctaLabel: 'Visit UTSC Admissions',
   },
 ]
 
@@ -47,8 +53,8 @@ export const expertise = [
 ]
 
 export const stats = [
-  { value: '17+', label: 'Years Experience' },
-  { value: '80+', label: 'Websites Migrated to Design Systems' },
-  { value: '100+', label: 'Components Built' },
+  { value: '17+', label: 'Web design and development experience' },
+  { value: '80+', label: 'Drupal site migrations' },
+  { value: '10+', label: 'Designed and developed custom themes' },
   { value: '2', label: 'Conference Presentations' },
 ]

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, ArrowUpRight, Download } from 'lucide-react'
+import { ArrowDown, Download } from 'lucide-react'
 import { site } from '../config/site'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion'
 
@@ -19,10 +19,10 @@ export function Hero() {
           className="flex w-full justify-center"
         >
           <div className="relative">
-            <div className="h-64 w-64 overflow-hidden rounded-full border-4 border-white bg-white shadow-2xl sm:h-72 sm:w-72 lg:h-80 lg:w-80 xl:h-96 xl:w-96">
+            <div className="h-48 w-48 overflow-hidden rounded-full border-4 border-white bg-white shadow-2xl sm:h-72 sm:w-72 lg:h-64 lg:w-64 xl:h-72 xl:w-72">
               <img
                 src="/images/salvi-headshot.png?v=5"
-                alt="Portrait of Salvi Keele, front-end developer and designer"
+                alt="Portrait of Salvi Grace Keele, front-end developer and designer"
                 width={384}
                 height={384}
                 decoding="async"
@@ -41,7 +41,7 @@ export function Hero() {
         >
           <p className="mb-6 flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-accent" aria-hidden />
-            <span className="text-xs font-medium tracking-[0.25em] text-muted">
+            <span className="text-sm font-medium tracking-[0.25em] text-muted sm:text-base">
               Front-end developer &amp; designer
             </span>
           </p>
@@ -57,29 +57,18 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted lg:text-lg">
-            Specializing in Drupal, front-end architecture, and accessible design
-            systems — I help organizations deliver beautiful, performant web
-            experiences that users love.
+            Specializing in Drupal, front-end architecture, and accessible user
+            experience design — I help organizations create intuitive, visually
+            engaging web experiences that are inclusive and easy to use.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
             <a
-              href="#work"
-              className="group inline-flex items-center gap-3 bg-ink px-7 py-3.5 text-xs font-medium tracking-[0.15em] text-cream transition-opacity hover:opacity-90"
-            >
-              View my work
-              <ArrowUpRight
-                size={16}
-                aria-hidden
-                className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-              />
-            </a>
-            <a
               href={site.resumePath}
               download
-              className="group inline-flex items-center gap-2 text-xs font-medium tracking-[0.15em] text-ink underline decoration-border underline-offset-4 transition-colors hover:text-accent"
+              className="group inline-flex items-center gap-3 bg-ink px-7 py-3.5 text-xs font-medium tracking-[0.15em] text-cream transition-opacity hover:opacity-90"
             >
-              Download resume
+              Download resume.
               <Download
                 size={14}
                 aria-hidden

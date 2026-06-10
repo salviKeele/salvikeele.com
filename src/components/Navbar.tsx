@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowUpRight, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { navLinks } from '../config/site'
 
 export function Navbar() {
@@ -18,7 +18,7 @@ export function Navbar() {
           className="font-display text-xl font-bold tracking-tight"
           onClick={closeMenu}
         >
-          Salvi Keele<span className="text-accent">.</span>
+          Salvi Grace Keele<span className="text-accent">.</span>
           <span className="sr-only">, home</span>
         </a>
 
@@ -35,22 +35,10 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-3">
-          <a
-            href="#contact"
-            className="group hidden items-center gap-2 border border-ink px-5 py-2.5 text-xs font-medium tracking-[0.15em] transition-colors hover:bg-ink hover:text-cream sm:inline-flex"
-          >
-            Let&apos;s talk
-            <ArrowUpRight
-              size={14}
-              aria-hidden
-              className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-            />
-          </a>
-
+        <div className="flex items-center gap-3 md:hidden">
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center border border-border md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center border border-border"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}

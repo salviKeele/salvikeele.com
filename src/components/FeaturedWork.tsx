@@ -4,16 +4,42 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
 import { projects } from '../data/projects'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion'
 
-function ProjectPreview({ image, alt }: { image: string; alt: string }) {
+function ProjectPreview({
+  image,
+  alt,
+  url,
+  title,
+}: {
+  image: string
+  alt: string
+  url?: string
+  title: string
+}) {
+  const imageElement = (
+    <img
+      src={image}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      className={`h-auto w-full rounded-[5px] drop-shadow-2xl ${url ? 'transition-opacity hover:opacity-90' : ''}`}
+    />
+  )
+
   return (
     <div className="relative mx-auto w-full max-w-xl">
-      <img
-        src={image}
-        alt={alt}
-        loading="lazy"
-        decoding="async"
-        className="h-auto w-full rounded-[5px] drop-shadow-2xl"
-      />
+      {url ? (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View ${title} (opens in a new tab)`}
+          className="block"
+        >
+          {imageElement}
+        </a>
+      ) : (
+        imageElement
+      )}
     </div>
   )
 }
@@ -40,24 +66,13 @@ export function FeaturedWork() {
       aria-labelledby="featured-work-heading"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 flex items-end justify-between gap-4">
+        <div className="mb-16">
           <h2
             id="featured-work-heading"
             className="text-xs font-medium tracking-[0.25em] text-muted"
           >
             Featured work
           </h2>
-          <a
-            href="#work"
-            className="group inline-flex items-center gap-2 text-xs font-medium tracking-[0.15em] text-ink transition-colors hover:text-accent"
-          >
-            View all projects
-            <ArrowUpRight
-              size={14}
-              aria-hidden
-              className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-            />
-          </a>
         </div>
 
         <div
@@ -90,6 +105,22 @@ export function FeaturedWork() {
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-ink/80 lg:text-base">
                   {project.description}
                 </p>
+                {project.url && project.ctaLabel && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group mt-6 inline-flex items-center gap-3 bg-ink px-6 py-3.5 text-xs font-medium tracking-[0.15em] text-cream transition-opacity hover:opacity-90"
+                  >
+                    {project.ctaLabel}
+                    <ArrowUpRight
+                      size={16}
+                      aria-hidden
+                      className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    />
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
+                )}
                 <ul className="mt-6 flex flex-wrap gap-2" aria-label="Technologies used">
                   {project.tags.map((tag) => (
                     <li
@@ -113,7 +144,12 @@ export function FeaturedWork() {
                 exit={reducedMotion ? undefined : { opacity: 0, y: -20 }}
                 transition={slideTransition}
               >
-                <ProjectPreview image={project.image} alt={project.imageAlt} />
+                <ProjectPreview
+                  image={project.image}
+                  alt={project.imageAlt}
+                  url={project.url}
+                  title={project.title}
+                />
               </motion.div>
             </AnimatePresence>
 
