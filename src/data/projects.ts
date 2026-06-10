@@ -44,7 +44,7 @@ export const projects: Project[] = [
 ]
 
 export const expertise = [
-  { number: '01', title: 'Drupal Development' },
+  { number: '01', title: 'Drupal and WordPress development' },
   { number: '02', title: 'Front-End Engineering' },
   { number: '03', title: 'UI/UX Design' },
   { number: '04', title: 'Accessibility & Compliance' },

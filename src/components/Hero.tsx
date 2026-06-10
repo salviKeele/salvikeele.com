@@ -57,9 +57,11 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted lg:text-lg">
-            Specializing in Drupal, front-end architecture, and accessible user
-            experience design — I help organizations create intuitive, visually
-            engaging web experiences that are inclusive and easy to use.
+            Specializing in Drupal, WordPress, front-end architecture, and accessible
+            digital experiences, I combine over 17 years of web development expertise
+            with AI-enhanced workflows powered by ChatGPT, Claude, Cursor, and GitHub
+            Copilot to create scalable, user-centered solutions that are both performant
+            and visually compelling.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
