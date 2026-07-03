@@ -1,13 +1,13 @@
 export const site = {
   name: 'Salvi Grace Keele',
-  title: 'Salvi Grace Keele — Front-End Developer & Designer',
+  title: 'Salvi Grace Keele — Lead Drupal & WordPress Developer',
   description:
-    'Front-end developer and designer specializing in Drupal, accessible design systems, and high-performance web experiences in Prince Edward County, Ontario.',
+    'Lead Drupal and WordPress developer specializing in accessible design systems and high-performance web experiences in Prince Edward County, Ontario.',
   url: 'https://salvikeele.ca',
   locale: 'en_CA',
   email: 'salvi.villavelez@gmail.com',
   location: 'Prince Edward County, ON',
-  resumePath: '/files/salvi-grace-keele-resume-2026.pdf',
+  resumePath: '/files/salvi-grace-keele-resume-07-2026.pdf',
 } as const
 
 export const navLinks = [

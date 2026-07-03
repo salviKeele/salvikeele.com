@@ -22,7 +22,7 @@ export function Hero() {
             <div className="h-48 w-48 overflow-hidden rounded-full border-4 border-white bg-white shadow-2xl sm:h-72 sm:w-72 lg:h-64 lg:w-64 xl:h-72 xl:w-72">
               <img
                 src="/images/salvi-headshot.png?v=5"
-                alt="Portrait of Salvi Grace Keele, front-end developer and designer"
+                alt="Portrait of Salvi Grace Keele, lead Drupal and WordPress developer"
                 width={384}
                 height={384}
                 decoding="async"
@@ -42,7 +42,7 @@ export function Hero() {
           <p className="mb-6 flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-accent" aria-hidden />
             <span className="text-sm font-medium tracking-[0.25em] text-muted sm:text-base">
-              Front-end developer &amp; designer
+              Lead Drupal &amp; WordPress developer
             </span>
           </p>
 
@@ -50,7 +50,7 @@ export function Hero() {
             id="hero-heading"
             className="font-display text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.5rem]"
           >
-            I design &amp; build digital experiences that make an impact
+            I build digital experiences to make an impact
             <span className="text-accent" aria-hidden>
               .
             </span>
@@ -59,8 +59,8 @@ export function Hero() {
           <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted lg:text-lg">
             Specializing in Drupal, WordPress, front-end architecture, and accessible
             digital experiences, I combine over 17 years of web development expertise
-            with AI-enhanced workflows powered by ChatGPT, Claude, Cursor, and GitHub
-            Copilot to create scalable, user-centered solutions that are both performant
+            with AI-enhanced workflows powered by ChatGPT, Claude, and Cursor to
+            create scalable, user-centered solutions that are both performant
             and visually compelling.
           </p>
 

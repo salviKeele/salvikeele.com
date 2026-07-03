@@ -12,14 +12,14 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Prince Edward County Vineyard Navigator',
+    title: 'University of Toronto Scarborough Admissions',
     description:
-      'An interactive map-based application helping visitors explore wineries across Prince Edward County with accessible, mobile-first design.',
-    tags: ['REACT', 'GOOGLE MAPS API', 'VITE', 'ACCESSIBILITY'],
-    image: '/images/projects/county-vineyards.png?v=3',
-    imageAlt: 'County Vineyards website shown on a laptop, featuring winery search and map discovery',
-    url: 'https://countyvineyards.ca',
-    ctaLabel: 'Visit County Vineyards',
+      'Admissions and student recruitment experience for UTSC — helping prospective students explore programs, campus life, and how to apply through an accessible, engaging site.',
+    tags: ['DRUPAL', 'UX DESIGN', 'ACCESSIBILITY', 'HIGHER ED'],
+    image: '/images/projects/admissions.png?v=3',
+    imageAlt: 'University of Toronto Scarborough admissions website shown on a laptop',
+    url: 'https://www.utsc.utoronto.ca/admissions/',
+    ctaLabel: 'Visit UTSC Admissions',
   },
   {
     id: 2,
@@ -32,14 +32,14 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'University of Toronto Scarborough Admissions',
+    title: 'Prince Edward County Vineyard Navigator',
     description:
-      'Admissions and student recruitment experience for UTSC — helping prospective students explore programs, campus life, and how to apply through an accessible, engaging site.',
-    tags: ['DRUPAL', 'UX DESIGN', 'ACCESSIBILITY', 'HIGHER ED'],
-    image: '/images/projects/admissions.png?v=3',
-    imageAlt: 'University of Toronto Scarborough admissions website shown on a laptop',
-    url: 'https://www.utsc.utoronto.ca/admissions/',
-    ctaLabel: 'Visit UTSC Admissions',
+      'An interactive map-based application helping visitors explore wineries across Prince Edward County with accessible, mobile-first design.',
+    tags: ['REACT', 'GOOGLE MAPS API', 'VITE', 'ACCESSIBILITY'],
+    image: '/images/projects/county-vineyards.png?v=3',
+    imageAlt: 'County Vineyards website shown on a laptop, featuring winery search and map discovery',
+    url: 'https://countyvineyards.ca',
+    ctaLabel: 'Visit County Vineyards',
   },
 ]
 
